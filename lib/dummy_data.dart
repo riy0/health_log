@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:health_log/models/cuisine.dart';
 
 import './models/category.dart';
+import './models/cuisine.dart';
 
+// Dummy Data of Categories
 const DUMMY_CATEGORIES = const [
   Category(
     id: 'c1',
@@ -27,5 +30,30 @@ const DUMMY_CATEGORIES = const [
     id: 'c5',
     title: 'French',
     color: Colors.red,
+  ),
+  Category(
+    id: 'c6',
+    title: 'For Vegan',
+    color: Colors.red,
+  ),
+];
+
+// Dummy Data of Categories
+const DUMMY_CUISINES = const [
+  Cuisine(
+    id: '1',
+    categories: [
+      'c1',
+      'c2',
+    ],
+    title: 'pizza',
+    affordability: Affordability.Affordable,
+    imageUrl:
+        'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=414&q=80',
+    duration: 30,
+    ingredients: ['1 tomatoes', '100g cheeze', '300g flour', '150g water'],
+    steps: ['add water to flour', 'topping', 'fire'],
+    isGlutenFree: false,
+    isLactoseFree: true,
   ),
 ];

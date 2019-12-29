@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import '../widgets/cuisine_item.dart';
 
-import './dummy_data.dart';
+import '../dummy_data.dart';
 
 class CategoryCuisinesScreen extends StatelessWidget {
   static const routeName = '/category-cuisines';
@@ -21,7 +22,13 @@ class CategoryCuisinesScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
-          return Text(categoryCuisines[index].title);
+          return CuisineItem(
+            id: categoryCuisines[index].id,
+            title: categoryCuisines[index].title,
+            imageUrl: categoryCuisines[index].imageUrl,
+            duration: categoryCuisines[index].duration,
+            affordability: categoryCuisines[index].affordability,
+          );
         },
         itemCount: categoryCuisines.length,
       ),

@@ -56,4 +56,43 @@ const DUMMY_CUISINES = const [
     isGlutenFree: false,
     isLactoseFree: true,
   ),
+  Cuisine(
+    id: '2',
+    categories: ['c1', 'c2', 'c3'],
+    title: 'pizza',
+    affordability: Affordability.Affordable,
+    imageUrl:
+        'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+    duration: 30,
+    ingredients: ['1 tomatoes', '100g cheeze', '300g flour', '150g water'],
+    steps: ['add water to flour', 'topping', 'fire'],
+    isGlutenFree: false,
+    isLactoseFree: true,
+  ),
+  Cuisine(
+    id: '3',
+    categories: ['c1', 'c2', 'c3'],
+    title: 'pizza',
+    affordability: Affordability.Affordable,
+    imageUrl:
+        'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+    duration: 30,
+    ingredients: ['1 tomatoes', '100g cheeze', '300g flour', '150g water'],
+    steps: ['add water to flour', 'topping', 'fire'],
+    isGlutenFree: false,
+    isLactoseFree: true,
+  ),
+  Cuisine(
+    id: '4',
+    categories: ['c1', 'c2', 'c3'],
+    title: 'pizza',
+    affordability: Affordability.Affordable,
+    imageUrl:
+        'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+    duration: 30,
+    ingredients: ['1 tomatoes', '100g cheeze', '300g flour', '150g water'],
+    steps: ['add water to flour', 'topping', 'fire'],
+    isGlutenFree: false,
+    isLactoseFree: true,
+  ),
 ];

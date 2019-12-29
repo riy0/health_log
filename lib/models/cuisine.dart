@@ -6,7 +6,6 @@ enum Affordability {
   Affordable,
   Luxurious,
   Pricey,
-  Easy,
 }
 
 class Cuisine {

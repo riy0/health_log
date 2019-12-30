@@ -1,21 +1,48 @@
 import 'package:flutter/material.dart';
 import '../widgets/cuisine_item.dart';
-
+import '../models/cuisine.dart';
 import '../dummy_data.dart';
 
-class CategoryCuisinesScreen extends StatelessWidget {
+class CategoryCuisinesScreen extends StatefulWidget {
   static const routeName = '/category-cuisines';
 
   @override
-  Widget build(BuildContext context) {
-    final routeArgs =
-        ModalRoute.of(context).settings.arguments as Map<String, String>;
-    final categoryTitle = routeArgs['title'];
-    final categoryId = routeArgs['id'];
-    final categoryCuisines = DUMMY_CUISINES.where((cuisine) {
-      return cuisine.categories.contains(categoryId);
-    }).toList();
+  _CategoryCuisinesScreenState createState() => _CategoryCuisinesScreenState();
+}
 
+class _CategoryCuisinesScreenState extends State<CategoryCuisinesScreen> {
+  String categoryTitle;
+  List<Cuisine> displayedCuisines;
+  bool _loadedInitData = false;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    if (!_loadedInitData) {
+      final routeArgs =
+          ModalRoute.of(context).settings.arguments as Map<String, String>;
+      categoryTitle = routeArgs['title'];
+      final categoryId = routeArgs['id'];
+      displayedCuisines = DUMMY_CUISINES.where((cuisine) {
+        return cuisine.categories.contains(categoryId);
+      }).toList();
+      _loadedInitData = true;
+    }
+    super.didChangeDependencies();
+  }
+
+  void _removeCuisine(String cuisineId) {
+    setState(() {
+      displayedCuisines.removeWhere((cuisine) => cuisine.id == cuisineId);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryTitle),
@@ -23,14 +50,15 @@ class CategoryCuisinesScreen extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return CuisineItem(
-            id: categoryCuisines[index].id,
-            title: categoryCuisines[index].title,
-            imageUrl: categoryCuisines[index].imageUrl,
-            duration: categoryCuisines[index].duration,
-            affordability: categoryCuisines[index].affordability,
+            id: displayedCuisines[index].id,
+            title: displayedCuisines[index].title,
+            imageUrl: displayedCuisines[index].imageUrl,
+            duration: displayedCuisines[index].duration,
+            affordability: displayedCuisines[index].affordability,
+            removeItem: _removeCuisine,
           );
         },
-        itemCount: categoryCuisines.length,
+        itemCount: displayedCuisines.length,
       ),
     );
   }

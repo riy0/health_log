@@ -53,7 +53,7 @@ const DUMMY_CUISINES = const [
     duration: 30,
     ingredients: ['1 tomatoes', '100g cheeze', '300g flour', '150g water'],
     steps: ['add water to flour', 'topping', 'fire'],
-    isGlutenFree: false,
+    isGlutenFree: true,
     isLactoseFree: true,
   ),
   Cuisine(
@@ -67,7 +67,7 @@ const DUMMY_CUISINES = const [
     ingredients: ['1 tomatoes', '100g cheeze', '300g flour', '150g water'],
     steps: ['add water to flour', 'topping', 'fire'],
     isGlutenFree: false,
-    isLactoseFree: true,
+    isLactoseFree: false,
   ),
   Cuisine(
     id: '3',

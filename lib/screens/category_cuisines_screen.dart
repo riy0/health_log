@@ -38,11 +38,13 @@ class _CategoryCuisinesScreenState extends State<CategoryCuisinesScreen> {
     super.didChangeDependencies();
   }
 
+  /*
   void _removeCuisine(String cuisineId) {
     setState(() {
       displayedCuisines.removeWhere((cuisine) => cuisine.id == cuisineId);
     });
   }
+  */
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +60,7 @@ class _CategoryCuisinesScreenState extends State<CategoryCuisinesScreen> {
             imageUrl: displayedCuisines[index].imageUrl,
             duration: displayedCuisines[index].duration,
             affordability: displayedCuisines[index].affordability,
-            removeItem: _removeCuisine,
+            // removeItem: _removeCuisine,
           );
         },
         itemCount: displayedCuisines.length,

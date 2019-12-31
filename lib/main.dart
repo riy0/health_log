@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-import './dummy_data.dart';
-
 import './screens/filters_screen.dart';
 import './screens/tabs_screen.dart';
 import './screens/cuisine_detail_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/category_cuisines_screen.dart';
 
+import './dummy_data.dart';
 import './models/cuisine.dart';
 
 void main() => runApp(MyApp());
@@ -24,6 +23,7 @@ class _MyAppState extends State<MyApp> {
   };
 
   List<Cuisine> _availableCuisines = DUMMY_CUISINES;
+  List<Cuisine> _favoriteCuisines = [];
 
   void _setFilters(Map<String, bool> filterData) {
     setState(() {
@@ -39,6 +39,26 @@ class _MyAppState extends State<MyApp> {
         return true;
       }).toList();
     });
+  }
+
+  void _toggleFavorite(String cuisineId) {
+    final existIndex =
+        _favoriteCuisines.indexWhere((cuisine) => cuisine.id == cuisineId);
+    if (existIndex >= 0) {
+      setState(() {
+        _favoriteCuisines.removeAt(existIndex);
+      });
+    } else {
+      setState(() {
+        _favoriteCuisines.add(
+          DUMMY_CUISINES.firstWhere((cuisine) => cuisine.id == cuisineId),
+        );
+      });
+    }
+  }
+
+  bool _isCuisineFavorite(String id) {
+    return _favoriteCuisines.any((cuisine) => cuisine.id == id);
   }
 
   @override
@@ -61,10 +81,11 @@ class _MyAppState extends State<MyApp> {
       // home: CategoriesScreen(),
       initialRoute: '/',
       routes: {
-        '/': (ctx) => TabsScreen(),
+        '/': (ctx) => TabsScreen(_favoriteCuisines),
         CategoryCuisinesScreen.routeName: (ctx) =>
             CategoryCuisinesScreen(_availableCuisines),
-        CuisineDetailScreen.routeName: (ctx) => CuisineDetailScreen(),
+        CuisineDetailScreen.routeName: (ctx) =>
+            CuisineDetailScreen(_toggleFavorite, _isCuisineFavorite),
         FiltersScreen.routeName: (ctx) => FiltersScreen(_filters, _setFilters),
       },
       onUnknownRoute: (settings) {

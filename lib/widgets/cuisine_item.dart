@@ -9,15 +9,16 @@ class CuisineItem extends StatelessWidget {
   final String imageUrl;
   final int duration;
   final Affordability affordability;
-  final Function removeItem;
+  // final Function removeItem;
 
   CuisineItem(
       {@required this.id,
       @required this.title,
       @required this.imageUrl,
       @required this.duration,
-      @required this.affordability,
-      @required this.removeItem});
+      @required this.affordability
+      // @required this.removeItem
+      });
 
   void selectCuisine(BuildContext context) {
     Navigator.of(context)
@@ -27,7 +28,7 @@ class CuisineItem extends StatelessWidget {
     )
         .then((result) {
       if (result != null) {
-        removeItem(result);
+        // removeItem(result);
       }
     });
   }

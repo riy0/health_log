@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'HealthLog',
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primarySwatch: Colors.yellow,
         accentColor: Colors.amber,
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',

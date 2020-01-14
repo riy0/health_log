@@ -66,8 +66,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'HealthLog',
       theme: ThemeData(
-        primarySwatch: Colors.yellow,
-        accentColor: Colors.amber,
+        primarySwatch: customSwatch,
+        accentColor: Colors.lime,
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -96,3 +96,20 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+// cf. http://mcg.mbitson.com/#!?mcgpalette0=%23fce5cd
+const MaterialColor customSwatch = const MaterialColor(
+  0xFFF6B880,
+  const <int, Color>{
+    50: const Color(0xFFFEF9F3),
+    100: const Color(0xFFFDEFE1),
+    200: const Color(0xFFFCE5CE),
+    300: const Color(0xFFFBDBBA),
+    400: const Color(0xFFFAD3AB),
+    500: const Color(0xFFF9CB9C),
+    600: const Color(0xFFF8C694),
+    700: const Color(0xFFF7BE8A),
+    800: const Color(0xFFF6B880),
+    900: const Color(0xFFF5AC6E),
+  },
+);

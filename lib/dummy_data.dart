@@ -6,24 +6,25 @@ import './models/cuisine.dart';
 
 // Dummy Data of Categories
 const DUMMY_CATEGORIES = const [
-  Category(id: 'c1', title: 'Salad', color: Colors.green),
-  Category(id: 'c2', title: 'Appetizers and Snacks', color: Colors.cyan),
-  Category(id: 'c3', title: 'Breakfast & Brunch', color: Colors.red),
-  Category(id: 'c4', title: 'Quick & easy', color: Colors.pinkAccent),
-  Category(id: 'c5', title: 'Guilty', color: Colors.blueAccent),
-  Category(id: 'c6', title: 'Chicken Recipes', color: Colors.orangeAccent),
-  Category(id: 'c7', title: 'World Cuisine', color: Colors.indigoAccent),
-  Category(id: 'c8', title: 'Muji', color: Colors.lime),
-  Category(id: 'c9', title: 'Cake', color: Colors.lime),
-  Category(id: 'c10', title: 'Local Cuisine', color: Colors.lime),
-  Category(id: 'c11', title: 'Soup', color: Colors.lime),
+  Category(id: 'c1', title: 'Salad', color: Colors.limeAccent),
+  Category(id: 'c2', title: 'Appetizers, Snack', color: Colors.limeAccent),
+  Category(id: 'c3', title: 'Cakes', color: Colors.lightGreenAccent),
+  Category(id: 'c4', title: 'Quick & easy', color: Colors.lightGreenAccent),
+  Category(id: 'c5', title: 'Guilty', color: Colors.lightGreen),
+  Category(id: 'c6', title: 'Chicken Recipes', color: Colors.lightGreen),
+  Category(id: 'c7', title: 'World Cuisine', color: Colors.green),
+  Category(id: 'c8', title: 'Muji', color: Colors.green),
+  Category(id: 'c9', title: 'Diet Food', color: Colors.orange),
+  Category(id: 'c10', title: 'Seafood', color: Colors.orange),
+  Category(id: 'c11', title: 'Soup', color: Colors.deepOrange),
+  Category(id: 'c12', title: 'Japanese', color: Colors.deepOrange),
 ];
 
 // Dummy Data of Categories
 const DUMMY_CUISINES = const [
   Cuisine(
     id: '1',
-    categories: ['c1', 'c4', 'c6'],
+    categories: ['c1', 'c2', 'c3', 'c9'],
     title: 'green salad',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -40,7 +41,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '2',
-    categories: ['c1', 'c2', 'c3'],
+    categories: ['c2', 'c4'],
     title: 'oatmeal pancake',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -69,7 +70,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '3',
-    categories: ['c1', 'c7'],
+    categories: ['c1', 'c2', 'c7'],
     title: 'salad with guacamole',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -93,7 +94,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '4',
-    categories: ['c1', 'c2', 'c3'],
+    categories: ['c2', 'c7'],
     title: 'Caprese',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -116,7 +117,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '5',
-    categories: ['c1'],
+    categories: ['c2', 'c9'],
     title: 'Grilled Vegetables',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -138,7 +139,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '6',
-    categories: ['c1'],
+    categories: ['c7', 'c10', 'c11'],
     title: 'Bouillabaisse',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -172,7 +173,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '7',
-    categories: ['c1'],
+    categories: ['c7'],
     title: 'Bulgogi',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -202,7 +203,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '8',
-    categories: ['c1'],
+    categories: ['c4'],
     title: 'Bacon egg',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -220,14 +221,14 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '9',
-    categories: ['c1'],
+    categories: ['c2', 'c5'],
     title: 'Croquet',
     affordability: Affordability.Affordable,
     imageUrl:
         'https://images.unsplash.com/photo-1559847844-b0915a3800c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1284&q=80',
-    duration: 15,
+    duration: 20,
     ingredients: [
-      '',
+      'potato',
     ],
     steps: [
       '',
@@ -237,7 +238,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '10',
-    categories: ['c1'],
+    categories: ['c4'],
     title: 'Noodle',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -254,7 +255,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '11',
-    categories: ['c1'],
+    categories: ['c2', 'c10'],
     title: 'Tuna steak',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -277,7 +278,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '12',
-    categories: ['c1'],
+    categories: ['c10'],
     title: 'Grilled Salmon',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -294,7 +295,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '13',
-    categories: ['c1'],
+    categories: ['c1', 'c2', 'c10'],
     title: 'Salmon Salad',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -311,7 +312,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '14',
-    categories: ['c1'],
+    categories: ['c5'],
     title: 'Roast Beaf Sand',
     affordability: Affordability.Affordable,
     imageUrl: '',
@@ -327,7 +328,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '15',
-    categories: ['c1, c8'],
+    categories: ['c2', 'c3', 'c7'],
     title: 'Tiramisu',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -354,13 +355,13 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '16',
-    categories: ['c1'],
-    title: 'Caprese',
+    categories: ['c2', 'c11', 'c12'],
+    title: 'turnip soup',
     affordability: Affordability.Affordable,
-    imageUrl: '',
+    imageUrl: 'https://www.pakutaso.com/shared/img/thumb/kabuIMGL4588_TP_V.jpg',
     duration: 15,
     ingredients: [
-      '',
+      '1 turnip',
     ],
     steps: [
       '',
@@ -370,29 +371,34 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '17',
-    categories: ['c1'],
-    title: 'Caprese',
+    categories: ['c5', 'c7'],
+    title: 'Vepřo knedlo zelo',
     affordability: Affordability.Affordable,
-    imageUrl: '',
+    imageUrl:
+        'https://www.pakutaso.com/shared/img/thumb/MIYAZAKI19116793_TP_V.jpg',
     duration: 15,
     ingredients: [
-      '',
+      "this is a Czech Republic's cuisine",
+      'Vepřo (pork)',
+      'knedlo (bread)',
+      'zelo (jelly)',
     ],
-    steps: [
-      '',
-    ],
+    steps: [],
     isGlutenFree: false,
     isLactoseFree: true,
   ),
   Cuisine(
     id: '17',
-    categories: ['c1'],
-    title: 'Caprese',
+    categories: ['c12'],
+    title: 'Bonito Don',
     affordability: Affordability.Affordable,
-    imageUrl: '',
+    imageUrl:
+        'https://www.pakutaso.com/shared/img/thumb/nichinanIMGL0073_TP_V.jpg',
     duration: 15,
     ingredients: [
-      '',
+      'bonito',
+      'soy sauce',
+      'wasabi',
     ],
     steps: [
       '',
@@ -402,10 +408,11 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '18',
-    categories: ['c1'],
-    title: 'Caprese',
+    categories: ['c2'],
+    title: 'Fried curry Broccoli',
     affordability: Affordability.Affordable,
-    imageUrl: '',
+    imageUrl:
+        'https://www.pakutaso.com/shared/img/thumb/tachiaraiIMGL4733_TP_V.jpg',
     duration: 15,
     ingredients: [
       '',
@@ -418,11 +425,12 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '19',
-    categories: ['c1'],
-    title: 'Caprese',
+    categories: ['c10', 'c11'],
+    title: 'Clam Chowder',
     affordability: Affordability.Affordable,
-    imageUrl: '',
-    duration: 15,
+    imageUrl:
+        'https://images.unsplash.com/photo-1560684352-8497838a2229?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=912&q=80',
+    duration: 40,
     ingredients: [
       '',
     ],
@@ -458,17 +466,17 @@ const DUMMY_CUISINES = const [
     ],
     steps: [
       'ゴマのタレは、材料をすべてボウルにいれてよく混ぜ合わせる。',
-      '豚肉マリネを作る。豚肉は塊のまま塩と①の黒ゴマのタレ（半量）を絡めて、冷蔵庫で一晩マリネする。',
-      '翌日、蒸し器で30分蒸して一口大にスライスする。',
-      '厚揚げソテーを作る。フライパンにオリーブオイル、エリンギ、いんげん、厚揚げを入れ、ソテーする。',
-      '④の味を塩で調え、①の黒ゴマのタレ（残りの半量）、③の蒸し豚と混ぜて、皿に盛り付ける。',
+      '豚肉マリネを作る。豚肉は塊のまま塩と①の��ゴマのタレ（半量）を絡めて、冷蔵庫で一晩マリネする���',
+      '翌日、蒸し���で30分蒸���て一口大にスライスする。',
+      '厚揚げソテーを作る。フラ��パン��オリーブオイル、エリンギ���いんげん、厚揚げを入れ、ソテーする。',
+      '④の味を塩で調え、①の黒ゴマのタレ（残りの半量���、③の蒸し豚と混ぜて、皿に盛り付ける。',
     ],
     isGlutenFree: false,
     isLactoseFree: true,
   ),
   Cuisine(
     id: '21',
-    categories: ['c8'],
+    categories: ['c3', 'c8'],
     title: 'Carrot Cake',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -500,7 +508,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '22',
-    categories: ['c8'],
+    categories: ['c3', 'c8', 'c12'],
     title: 'Matcha Cheese Cake',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -534,7 +542,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '23',
-    categories: ['c8'],
+    categories: ['c8', 'c9'],
     title: 'Roast Onion & mushrooms',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -563,7 +571,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '24',
-    categories: ['c8'],
+    categories: ['c1', 'c2', 'c8'],
     title: 'Apple & beats Salad',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -592,8 +600,8 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '25',
-    categories: ['c8'],
-    title: '',
+    categories: ['c1', 'c2', 'c8'],
+    title: 'turnip salad',
     affordability: Affordability.Affordable,
     imageUrl:
         'https://cafemeal.muji.com/wp-content/uploads/sites/2/2015/08/27132258/fig.jpg',
@@ -619,17 +627,85 @@ const DUMMY_CUISINES = const [
     isLactoseFree: true,
   ),
   Cuisine(
-    id: '',
-    categories: ['c1'],
-    title: 'Caprese',
+    id: '26',
+    categories: ['c2', 'c8'],
+    title: 'Biscotti / 本和香糖',
     affordability: Affordability.Affordable,
-    imageUrl: '',
+    imageUrl:
+        'https://cafemeal.muji.com/wp-content/uploads/sites/2/2016/04/18153724/biscotti_main.jpg',
     duration: 15,
     ingredients: [
-      '',
+      '卵1個',
+      '本和香糖50g',
+      'オリーブオイル15cc',
+      '薄力粉120g',
+      'ベーキングパウダー小さじ1/3',
+      'ピーナッツ40g',
+      'カシューナッツ40g',
+      'キャラウェイ小さじ1',
     ],
     steps: [
-      '',
+      '卵と本和香糖をボウルに入れ、ホイッパーで本和香糖のダマがなくなる程度まで混ぜ合わせ、オリーブオイルを加えて混ぜる',
+      '薄力粉とベーキングパウダーをふるいながら②のボウルに加え、多少粉っぽさが残る程度までヘラで切るように、また押し付けるように混ぜる',
+      '油（分量外）を手につけてから生地を手にとり、なまこ状に成型しオーブンシートを敷いた天板に乗せ、厚さ1cm、幅9cm、長さ20cm程度に生地を押しながら形を整える',
+      '170℃に温めておいたオーブンで13分ほど焼いたら一度取り出し、完全に冷ましてから1～1.2cmほどの幅でカットする',
+      '切り目を表にして150℃に温めたオーブンで25分焼く',
+    ],
+    isGlutenFree: false,
+    isLactoseFree: true,
+  ),
+  Cuisine(
+    id: '27',
+    categories: ['c2', 'c8'],
+    title: 'Matcha Biscotti',
+    affordability: Affordability.Affordable,
+    imageUrl:
+        'https://cafemeal.muji.com/wp-content/uploads/sites/2/2016/04/18153724/biscotti_main.jpg',
+    duration: 15,
+    ingredients: [
+      '本和香糖50g',
+      'オリーブオイル15㏄',
+      '薄力粉120g',
+      'ベーキングパウダー小さじ1/3',
+      '抹茶15g',
+      'カシューナッツ80g',
+    ],
+    steps: [
+      '卵と本和香糖をボウルに入れ、ホイッパーで本和香糖のダマがなくなる程度まで混ぜ合わせ、オリーブオイルを加えて混ぜる',
+      '薄力粉とベーキングパウダーをふるいながら②のボウルに加え、多少粉っぽさが残る程度までヘラで切るように、また押し付けるように混ぜる',
+      '油（分量外）を手につけてから生地を手にとり、なまこ状に成型しオーブンシートを敷いた天板に乗せ、厚さ1cm、幅9cm、長さ20cm程度に生地を押しながら形を整える',
+      '170℃に温めておいたオーブンで13分ほど焼いたら一度取り出し、完全に冷ましてから1～1.2cmほどの幅でカットする',
+      '切り目を表にして150℃に温めたオーブンで25分焼く',
+    ],
+    isGlutenFree: false,
+    isLactoseFree: true,
+  ),
+  Cuisine(
+    id: '28',
+    categories: ['c2', 'c8'],
+    title: 'Chocolate Biscotti',
+    affordability: Affordability.Affordable,
+    imageUrl:
+        'https://cafemeal.muji.com/wp-content/uploads/sites/2/2016/04/18153724/biscotti_main.jpg',
+    duration: 15,
+    ingredients: [
+      '卵1個',
+      '本和香糖50g',
+      'オリーブオイル15㏄',
+      '薄力粉120g',
+      'ベーキングパウダー小さじ1/3',
+      'ココアパウダー15g',
+      'ピーナッツ20g',
+      'カシューナッツ20g',
+      'チョコチャンク（小さいブロック状のチョコ）40g',
+    ],
+    steps: [
+      'ピーナッツとカシューナッツはトースターで焼き色をつけ、軽く砕いて粗熱をとって冷ましておく',
+      '卵と本和香糖をボウルに入れ、ホイッパーで本和香糖のダマがなくなる程度まで混ぜ合わせ、オリーブオイルを加えて混ぜる',
+      '薄力粉とベーキングパウダーをふるいながら②のボウルに加え、多少粉っぽさが残る程度までヘラで切るように、また押し付けるように混ぜる',
+      '油（分量外）を手につけてから生地を手にとり、なまこ状に成型しオーブンシートを敷いた天板に乗せ、厚さ1cm、幅9cm、長さ20cm程度に生地を押しながら形を整える',
+      '170℃に温めておいたオーブンで13分ほど焼いたら一度取り出し、完全に冷ましてから1～1.2cmほどの幅でカットする',
+      '切り目を表にして150℃に温めたオーブンで25分焼く',
     ],
     isGlutenFree: false,
     isLactoseFree: true,

@@ -24,7 +24,7 @@ const DUMMY_CATEGORIES = const [
 const DUMMY_CUISINES = const [
   Cuisine(
     id: '1',
-    categories: ['c1', 'c2', 'c3', 'c9'],
+    categories: ['c1', 'c2', 'c9'],
     title: 'green salad',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -328,7 +328,7 @@ const DUMMY_CUISINES = const [
   ),
   Cuisine(
     id: '15',
-    categories: ['c2', 'c3', 'c7'],
+    categories: ['c3', 'c7'],
     title: 'Tiramisu',
     affordability: Affordability.Affordable,
     imageUrl:
@@ -465,7 +465,7 @@ const DUMMY_CUISINES = const [
       '- 厚揚げ（横半分にして、8等分にカット）1丁分（200g',
     ],
     steps: [
-      'ゴマのタレは、材料をすべてボウルにいれてよく混ぜ合わせる。',
+      'ゴ���のタレは、材料をすべてボウルにいれてよく混ぜ合わせる。',
       '豚肉マリネを作る。豚肉は塊のまま塩と①の��ゴマのタレ（半量）を絡めて、冷蔵庫で一晩マリネする���',
       '翌日、蒸し���で30分蒸���て一口大にスライスする。',
       '厚揚げソテーを作る。フラ��パン��オリーブオイル、エリンギ���いんげん、厚揚げを入れ、ソテーする。',
@@ -647,7 +647,7 @@ const DUMMY_CUISINES = const [
     steps: [
       '卵と本和香糖をボウルに入れ、ホイッパーで本和香糖のダマがなくなる程度まで混ぜ合わせ、オリーブオイルを加えて混ぜる',
       '薄力粉とベーキングパウダーをふるいながら②のボウルに加え、多少粉っぽさが残る程度までヘラで切るように、また押し付けるように混ぜる',
-      '油（分量外）を手につけてから生地を手にとり、なまこ状に成型しオーブンシートを敷いた天板に乗せ、厚さ1cm、幅9cm、長さ20cm程度に生地を押しながら形を整える',
+      '油（分量外）を手につけてから生地を手にとり、なまこ状に成型しオーブンシートを敷いた天���������������に乗せ、厚さ1cm、幅9cm、長さ20cm程度に生地を押しながら形を整える',
       '170℃に温めておいたオーブンで13分ほど焼いたら一度取り出し、完全に冷ましてから1～1.2cmほどの幅でカットする',
       '切り目を表にして150℃に温めたオーブンで25分焼く',
     ],
@@ -711,33 +711,52 @@ const DUMMY_CUISINES = const [
     isLactoseFree: true,
   ),
   Cuisine(
-    id: '',
-    categories: ['c1'],
-    title: 'Caprese',
+    id: '29',
+    categories: ['c4', 'c7', 'c8'],
+    title: '蕃茄炒蛋',
     affordability: Affordability.Affordable,
-    imageUrl: '',
+    imageUrl:
+        'https://cafemeal.muji.com/wp-content/uploads/sites/2/2016/11/21125600/161006_cafemeal5922.jpg',
     duration: 15,
-    ingredients: [
-      '',
-    ],
+    ingredients: ['tomato', 'egg', 'leek'],
     steps: [
-      '',
+      'トマトベースを作っておく。大きめの角切りにしたトマトとセミドライトマトをボウルにいれて混ぜ合わせる',
+      'たれを作る。すべての調味料をあわせて耐熱容器に入れ、電子レンジで加熱する',
+      'フライパンにトマトベースを入れ、トマトの出し汁が出てオレンジ色になるまで炒める',
+      '3にだしとたれを加え、よく混ぜ合わせる',
+      '4ににらと溶き卵を全体的に流し込み、少し固まるくらいまで待ち、少し混ぜて、卵が半熟くらいの状態で仕上げる',
     ],
     isGlutenFree: false,
     isLactoseFree: true,
   ),
   Cuisine(
-    id: '',
-    categories: ['c1'],
-    title: 'Caprese',
+    id: '30',
+    categories: ['c8', 'c12'],
+    title: 'きゅうりと茶美豚のからし焼き風',
     affordability: Affordability.Affordable,
-    imageUrl: '',
+    imageUrl:
+        'https://cafemeal.muji.com/wp-content/uploads/sites/2/2015/08/27151212/20150728.jpg',
     duration: 15,
     ingredients: [
-      '',
+      'ごま油大さじ1',
+      'にんにく（みじん切り）小さじ1/2',
+      '木綿豆腐1丁',
+      '豚肉切り落とし100g',
+      'きゅうり1～1.5本',
+      'タレ',
+      '- ごま油小さじ1',
+      '- 生姜（おろし）小さじ1/2',
+      '- 豆板醤少量（小さじ1/4ほど）',
+      '- 長ネギ（みじん切り）/4本',
+      '- 本和香糖大さじ1/2',
+      '- 料理酒大さじ2',
+      '- みりん大さじ2',
+      '- 醤油大さじ2',
     ],
     steps: [
-      '',
+      '豆腐の水を切る',
+      '具材を切る',
+      'タレを作って炒めて豆腐入れて完成',
     ],
     isGlutenFree: false,
     isLactoseFree: true,

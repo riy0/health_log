@@ -21,8 +21,8 @@ class FavoritesScreen extends StatelessWidget {
             id: favoriteCuisines[index].id,
             title: favoriteCuisines[index].title,
             imageUrl: favoriteCuisines[index].imageUrl,
-            //duration: favoriteCuisines[index].duration,
-            //affordability: favoriteCuisines[index].affordability,
+            duration: favoriteCuisines[index].duration,
+            affordability: favoriteCuisines[index].affordability,
           );
         },
         itemCount: favoriteCuisines.length,

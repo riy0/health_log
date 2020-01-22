@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> {
       title: 'HealthLog',
       theme: ThemeData(
         primarySwatch: customSwatch,
-        accentColor: Colors.lime,
+        accentColor: Colors.orange,
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -99,7 +99,7 @@ class _MyAppState extends State<MyApp> {
 
 // cf. http://mcg.mbitson.com/#!?mcgpalette0=%23fce5cd
 const MaterialColor customSwatch = const MaterialColor(
-  0xFFF6B880,
+  0xFFF8DEC3,
   const <int, Color>{
     50: const Color(0xFFFEF9F3),
     100: const Color(0xFFFDEFE1),

@@ -67,7 +67,7 @@ class _MyAppState extends State<MyApp> {
       title: 'HealthLog',
       theme: ThemeData(
         primarySwatch: customSwatch,
-        accentColor: Colors.orange,
+        accentColor: Colors.deepOrangeAccent,
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
